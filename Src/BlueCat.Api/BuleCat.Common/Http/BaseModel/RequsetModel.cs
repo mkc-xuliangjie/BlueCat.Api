@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
-namespace BlueCat.Contract
+namespace BuleCat.Common
 {
     public class RequsetModel
     {
