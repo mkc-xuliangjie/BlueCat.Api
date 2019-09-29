@@ -25,7 +25,21 @@ namespace BlueCat.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            //配置跨域处理
+            services.AddCors(options =>
+            {
+                options.AddPolicy("any", builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .SetPreflightMaxAge(TimeSpan.FromMinutes(6)));
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +54,12 @@ namespace BlueCat.Api
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            //允许跨域全局设置
+            app.UseCors("any");
+
+            //// 保证在 Mvc 之前调用
+            //app.UseHttpContextGlobal()
+            //   .UseToolTrace();
 
             app.UseHttpsRedirection();
             app.UseMvc();
