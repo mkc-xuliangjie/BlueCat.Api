@@ -25,7 +25,7 @@ namespace BuleCat.Common.Http.Filters
 
             // validate the params must be not null, then expose "BIZData" and "Account"
             string userName = context.HttpContext.User.Identity.IsAuthenticated ? context.HttpContext.User.Identity.Name : null;
-            var parameters = context.ActionDescriptor.Parameters.Where(p => p.ParameterType.IsClass && !p.ParameterType.IsPrimitive && typeof(RequsetModel).IsAssignableFrom(p.ParameterType));
+            var parameters = context.ActionDescriptor.Parameters.Where(p => p.ParameterType.IsClass && !p.ParameterType.IsPrimitive && typeof(RequestModel).IsAssignableFrom(p.ParameterType));
             foreach (var p in parameters)
             {
                 if (!context.ActionArguments.ContainsKey(p.Name))
@@ -36,7 +36,7 @@ namespace BuleCat.Common.Http.Filters
                 }
 
                 var requestModelObj = context.ActionArguments[p.Name];
-                var requestModel = requestModelObj as RequsetModel;
+                var requestModel = requestModelObj as RequestModel;
                 var requestModelType = requestModelObj.GetType().GetTypeInfo();
                 if (requestModelType.BaseType != null)
                 {

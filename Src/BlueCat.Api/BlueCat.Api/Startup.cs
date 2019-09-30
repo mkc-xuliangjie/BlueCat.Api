@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using FluentValidation.AspNetCore
 
 namespace BlueCat.Api
 {
@@ -27,15 +28,26 @@ namespace BlueCat.Api
         {
 
 
-            //配置跨域处理
-            services.AddCors(options =>
+            ////配置跨域处理
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("any", builder => builder
+            //        .AllowAnyOrigin()
+            //        .AllowAnyHeader()
+            //        .AllowAnyMethod()
+            //        .AllowCredentials()
+            //        .SetPreflightMaxAge(TimeSpan.FromMinutes(6)));
+            //});
+
+            services.AddMvc().AddMvcOptions(option =>
             {
-                options.AddPolicy("any", builder => builder
-                    .AllowAnyOrigin()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .AllowCredentials()
-                    .SetPreflightMaxAge(TimeSpan.FromMinutes(6)));
+                //option.Filters.Add<LogAttribute>();
+                //option.Filters.Add<ExceptionAttribute>();
+                //option.Filters.Add(new ServiceFilterAttribute(typeof(Filters.ValidateUserFilterAttribute)));
+            })
+           .AddFluentValidation(fv =>
+           {
+               fv.RegisterValidatorsFromAssemblyContaining<Startup>();  // 当前程序集 https://fluentvalidation.net/aspnet#asp-net-core
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -55,7 +67,7 @@ namespace BlueCat.Api
                 app.UseHsts();
             }
             //允许跨域全局设置
-            app.UseCors("any");
+            //app.UseCors("any");
 
             //// 保证在 Mvc 之前调用
             //app.UseHttpContextGlobal()

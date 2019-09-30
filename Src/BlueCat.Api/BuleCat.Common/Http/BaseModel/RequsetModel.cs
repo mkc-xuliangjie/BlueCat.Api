@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BuleCat.Common
 {
-    public class RequsetModel
+    public class RequestModel
     {
         /// <summary>
         /// 请求的应用名称
@@ -23,10 +23,10 @@ namespace BuleCat.Common
         public string Account { get; set; }
     }
 
-    public class RequsetModel<T> : RequsetModel where T : class, new()
+    public class RequestModel<T> : RequestModel where T : class, new()
     {
         /// <summary>
-        /// 业务数据，将 <see cref="RequsetModel.Data"/> 反序列化为指定的对象 <typeparamref name="T"/>, 若不能反序列化，将设置为 <code>default(T)</code>
+        /// 业务数据，将 <see cref="RequestModel.Data"/> 反序列化为指定的对象 <typeparamref name="T"/>, 若不能反序列化，将设置为 <code>default(T)</code>
         /// </summary>
         public T BusinessData { get; set; }
     }
