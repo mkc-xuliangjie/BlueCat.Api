@@ -4,8 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BlueCat.IService\BlueCat.IService.csproj" />
-  </ItemGroup>
-
 </Project>

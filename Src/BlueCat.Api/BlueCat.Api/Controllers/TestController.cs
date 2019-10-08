@@ -25,7 +25,7 @@ namespace BlueCat.Api.Controllers
 
         [HttpGet("v1/test")]
         [ValidateRequestModel]
-        public ResponseModel<TestResponse> GetTestResponse([FromQuery]RequestModel<TestRequest> requestModel)
+        public async Task<ResponseModel<TestResponse>> GetTestResponseAsync([FromQuery]RequestModel<TestRequest> requestModel)
         {
             ResponseModel<TestResponse> responseModel = new ResponseModel<TestResponse>();
 
@@ -35,7 +35,7 @@ namespace BlueCat.Api.Controllers
 
             responseModel.ResultData = testResponse;
 
-            return responseModel;  
+            return  responseModel;  
         }
 
 

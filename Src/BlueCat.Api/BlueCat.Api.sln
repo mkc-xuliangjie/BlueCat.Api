@@ -3,21 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Api", "BlueCat.Api\BlueCat.Api.csproj", "{BF27A4E1-00C0-4C64-9A55-88FC45A1224B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Api", "BlueCat.Api\BlueCat.Api.csproj", "{BF27A4E1-00C0-4C64-9A55-88FC45A1224B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuleCat.Common", "BuleCat.Common\BuleCat.Common.csproj", "{42A73314-936C-488A-9BC7-5CA77B560667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuleCat.Common", "BuleCat.Common\BuleCat.Common.csproj", "{42A73314-936C-488A-9BC7-5CA77B560667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Contract", "BlueCat.Contract\BlueCat.Contract.csproj", "{4D9B4C39-FC4F-4EEB-8D4C-086A97505BC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Contract", "BlueCat.Contract\BlueCat.Contract.csproj", "{4D9B4C39-FC4F-4EEB-8D4C-086A97505BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.IService", "BlueCat.IService\BlueCat.IService.csproj", "{78B0C1A5-4E7B-40FB-ACB0-242A00727C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Service", "BlueCat.Service\BlueCat.Service.csproj", "{B177FF31-5D7E-4131-8F21-99B915803867}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Service", "BlueCat.Service\BlueCat.Service.csproj", "{B177FF31-5D7E-4131-8F21-99B915803867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.MySqlRepository", "BlueCat.MySqlRepository\BlueCat.MySqlRepository.csproj", "{1C82E6B6-8454-40F2-8C6C-855C20630550}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.MySqlRepository", "BlueCat.MySqlRepository\BlueCat.MySqlRepository.csproj", "{1C82E6B6-8454-40F2-8C6C-855C20630550}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.IRepository", "BlueCat.IRepository\BlueCat.IRepository.csproj", "{0508760D-D770-46FC-92E0-1174BEE52F22}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Entity", "BlueCat.Entity\BlueCat.Entity.csproj", "{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Entity", "BlueCat.Entity\BlueCat.Entity.csproj", "{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +33,6 @@ Global
 		{4D9B4C39-FC4F-4EEB-8D4C-086A97505BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9B4C39-FC4F-4EEB-8D4C-086A97505BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9B4C39-FC4F-4EEB-8D4C-086A97505BC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78B0C1A5-4E7B-40FB-ACB0-242A00727C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78B0C1A5-4E7B-40FB-ACB0-242A00727C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78B0C1A5-4E7B-40FB-ACB0-242A00727C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78B0C1A5-4E7B-40FB-ACB0-242A00727C16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B177FF31-5D7E-4131-8F21-99B915803867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B177FF31-5D7E-4131-8F21-99B915803867}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B177FF31-5D7E-4131-8F21-99B915803867}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,10 +41,6 @@ Global
 		{1C82E6B6-8454-40F2-8C6C-855C20630550}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C82E6B6-8454-40F2-8C6C-855C20630550}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C82E6B6-8454-40F2-8C6C-855C20630550}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0508760D-D770-46FC-92E0-1174BEE52F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0508760D-D770-46FC-92E0-1174BEE52F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0508760D-D770-46FC-92E0-1174BEE52F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0508760D-D770-46FC-92E0-1174BEE52F22}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
