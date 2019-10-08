@@ -13,6 +13,12 @@ namespace BuleCat.Common.Http.Filters
     {
         private static readonly ConcurrentDictionary<Type, Type> ValidatorHub = new ConcurrentDictionary<Type, Type>();
 
+
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            this.ValidateCore(context);
+        }
+
         public virtual void ValidateCore(ActionExecutingContext context)
         {
             if (!context.ModelState.IsValid)
