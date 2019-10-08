@@ -1,5 +1,5 @@
-﻿using BuleCat.Common.Http;
-using BuleCat.Common.Mapper;
+﻿using BuleCat.Common.AutoMapper;
+using BuleCat.Common.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +33,8 @@ namespace BuleCat.Common.Extensions
                 {
                     if (!context.Request.Headers.ContainsKey(Constant.RESTfulTraceId))
                     {
-                        var traceId = Guid.NewGuid().ToString("N");
+                        //var traceId = Guid.NewGuid().ToString("N");
+                        var traceId = Guid.NewGuid().ToString();
                         context.Request.Headers.Add(Constant.RESTfulTraceId, traceId);
                     }
 

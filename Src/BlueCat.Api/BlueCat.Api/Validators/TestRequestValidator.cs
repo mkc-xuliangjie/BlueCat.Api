@@ -7,7 +7,7 @@ namespace BlueCat.Api.Validators
     {
         public TestRequestValidator()
         {
-
+            RuleFor(m => m.RequestContent).Length(1, 2);
         }
     }
 }
