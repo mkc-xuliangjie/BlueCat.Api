@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlueCat.Contract\BlueCat.Contract.csproj" />
+    <ProjectReference Include="..\BuleCat.Common\BuleCat.Common.csproj" />
+  </ItemGroup>
+
 </Project>

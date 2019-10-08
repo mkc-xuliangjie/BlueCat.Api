@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlueCat.Contract\BlueCat.Contract.csproj" />
+    <ProjectReference Include="..\BlueCat.Service\BlueCat.Service.csproj" />
     <ProjectReference Include="..\BuleCat.Common\BuleCat.Common.csproj" />
   </ItemGroup>
 

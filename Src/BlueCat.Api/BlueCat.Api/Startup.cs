@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using FluentValidation.AspNetCore;
 using BuleCat.Common.Extensions;
 using BuleCat.Common.DependencyInjection;
+using BlueCat.Service.DependencyInjection;
 
 namespace BlueCat.Api
 {
@@ -29,6 +30,8 @@ namespace BlueCat.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAppSettings(Configuration);
+
+            services.AddServices();
 
             ////配置跨域处理
             services.AddCors(options =>
