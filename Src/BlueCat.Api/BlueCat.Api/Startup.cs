@@ -29,15 +29,15 @@ namespace BlueCat.Api
 
 
             ////配置跨域处理
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("any", builder => builder
-            //        .AllowAnyOrigin()
-            //        .AllowAnyHeader()
-            //        .AllowAnyMethod()
-            //        .AllowCredentials()
-            //        .SetPreflightMaxAge(TimeSpan.FromMinutes(6)));
-            //});
+            services.AddCors(options =>
+            {
+                options.AddPolicy("any", builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .SetPreflightMaxAge(TimeSpan.FromMinutes(6)));
+            });
 
             services.AddMvc().AddMvcOptions(option =>
             {
@@ -70,8 +70,8 @@ namespace BlueCat.Api
             //app.UseCors("any");
 
             //// 保证在 Mvc 之前调用
-            //app.UseHttpContextGlobal()
-            //   .UseToolTrace();
+            app.UseHttpContextGlobal()
+               .UseToolTrace();
 
             app.UseHttpsRedirection();
             app.UseMvc();
