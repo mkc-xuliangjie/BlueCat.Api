@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using FluentValidation.AspNetCore;
 using BuleCat.Common.Extensions;
+using BuleCat.Common.DependencyInjection;
 
 namespace BlueCat.Api
 {
@@ -27,7 +28,7 @@ namespace BlueCat.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddAppSettings(Configuration);
 
             ////配置跨域处理
             services.AddCors(options =>

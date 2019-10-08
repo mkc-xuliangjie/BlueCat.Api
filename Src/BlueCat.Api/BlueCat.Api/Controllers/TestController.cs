@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using BlueCat.Contract.Test;
 using BuleCat.Common;
+using BuleCat.Common.DependencyInjection;
 using BuleCat.Common.Http.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace BlueCat.Api.Controllers
 {
@@ -14,8 +16,12 @@ namespace BlueCat.Api.Controllers
     [ApiController]
     public class TestController : ControllerBase
     {
-        public TestController()
-        { }
+
+        private readonly AppSettings appSettings;
+        public TestController(IOptions<AppSettings> options)
+        {
+            appSettings = options.Value;
+        }
 
         [HttpGet("v1/test")]
         [ValidateRequestModel]
@@ -25,7 +31,7 @@ namespace BlueCat.Api.Controllers
 
             TestResponse testResponse = new TestResponse();
 
-            testResponse.ResponseContent = requestModel.BusinessData.RequestContent;
+            testResponse.ResponseContent = appSettings.Test;
 
             responseModel.ResultData = testResponse;
 
