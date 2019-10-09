@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlueCat.MySqlRepository.Interface
 {
-    interface ITestRepository
+    public interface ITestRepository
     {
     }
 }
