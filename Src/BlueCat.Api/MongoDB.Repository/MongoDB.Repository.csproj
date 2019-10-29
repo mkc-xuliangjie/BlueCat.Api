@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Bson" Version="2.5.1" />
+    <PackageReference Include="mongocsharpdriver" Version="2.5.0" />
   </ItemGroup>
 
   <ItemGroup>

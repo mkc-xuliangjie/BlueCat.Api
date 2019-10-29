@@ -15,6 +15,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.MySqlRepository", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Entity", "BlueCat.Entity\BlueCat.Entity.csproj", "{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Repository", "MongoDB.Repository\MongoDB.Repository.csproj", "{75E3D5B4-A1A6-4891-810F-452BA192BC11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Test", "BlueCat.Test\BlueCat.Test.csproj", "{D9062A52-D6B5-410E-B371-489EB5E5F415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Repository.IEntity", "MongoDB.Repository.IEntity\MongoDB.Repository.IEntity.csproj", "{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Repository", "BlueCat.Repository\BlueCat.Repository.csproj", "{CA48CD66-18DF-4662-BC0E-6054BECE86EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +53,22 @@ Global
 		{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE6986B0-8483-4FB5-AA8C-5FB79D260E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E3D5B4-A1A6-4891-810F-452BA192BC11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E3D5B4-A1A6-4891-810F-452BA192BC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E3D5B4-A1A6-4891-810F-452BA192BC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E3D5B4-A1A6-4891-810F-452BA192BC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9062A52-D6B5-410E-B371-489EB5E5F415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9062A52-D6B5-410E-B371-489EB5E5F415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9062A52-D6B5-410E-B371-489EB5E5F415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9062A52-D6B5-410E-B371-489EB5E5F415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

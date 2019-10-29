@@ -11,6 +11,8 @@ namespace BlueCat.MySqlRepository.DependencyInjection
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
+            services.AddSingleton<ITestRepository, TestRepository>();
+
             services.AddScoped<ITestRepository, TestRepository>();
 
             return services;

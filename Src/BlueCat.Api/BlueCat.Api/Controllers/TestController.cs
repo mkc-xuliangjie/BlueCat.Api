@@ -40,9 +40,10 @@ namespace BlueCat.Api.Controllers
 
         [HttpGet("v1/test1")]
         //[ValidateRequestModel]
-        public string GetTest1Response()
+        public async Task<long> GetTest1Response()
         {
-            return "11";
+            return await testServices.GetUserCountAsync();
+           // return "11";
         }
     }
 }

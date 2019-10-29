@@ -7,5 +7,7 @@ namespace BlueCat.Service.Interface
     public interface ITestServices
     {
         Task<ResponseModel<TestResponse>> GetTestResponseAsync(TestRequest requestModel);
+
+        Task<long> GetUserCountAsync();
     }
 }
