@@ -16,12 +16,5 @@ namespace BlueCat.Repository
 
             return services;
         }
-
-        public static IServiceCollection AddDBConfig(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.Configure<DBConfig>(configuration.GetSection("DBConfig"));
-
-            return services;
-        }
     }
 }

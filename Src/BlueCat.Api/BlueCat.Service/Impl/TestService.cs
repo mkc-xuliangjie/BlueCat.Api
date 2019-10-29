@@ -3,12 +3,15 @@ using BlueCat.Repository;
 using BlueCat.Service.Interface;
 using BuleCat.Common;
 using BuleCat.Common.Http;
+using NLog;
 using System.Threading.Tasks;
 
 namespace BlueCat.Service.Impl
 {
     public class TestService : ITestServices
     {
+        private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
+
         private readonly IUserRepository userRepository;
         public TestService(IUserRepository iuserRepository)
         {
@@ -34,6 +37,9 @@ namespace BlueCat.Service.Impl
 
         public async Task<long> GetUserCountAsync()
         {
+            //logger.Info("GetCityServicePreInfoAsync_Repository[Begin],requestId:{requestId},account:{account},param:{@param}", requestId, account, param);
+            _logger.Info("funtion name:GetUserCountAsync,TraceId:{requestId}", HttpContextGlobal.CurrentTraceId);
+
             return await userRepository.GetUserCountAsync();
         }
     }

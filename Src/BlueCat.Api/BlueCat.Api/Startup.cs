@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BlueCat.Repository;
+using BlueCat.Service.DependencyInjection;
+using BuleCat.Common.DependencyInjection;
+using BuleCat.Common.Extensions;
+using BuleCat.Common.Http.Filters;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using FluentValidation.AspNetCore;
-using BuleCat.Common.Extensions;
-using BuleCat.Common.DependencyInjection;
-using BlueCat.Service.DependencyInjection;
-using MongoDB.Repository;
-using BlueCat.Api.Register;
-using BlueCat.Repository;
+using System;
+using NLog;
+using NLog.Mongo;
+using NLog.Web;
 
 namespace BlueCat.Api
 {
@@ -38,10 +34,6 @@ namespace BlueCat.Api
 
             services.AddMongodbRepository();
 
-            services.AddDBConfig(Configuration);
-            
-
-
             ////配置跨域处理
             services.AddCors(options =>
             {
@@ -55,9 +47,8 @@ namespace BlueCat.Api
 
             services.AddMvc().AddMvcOptions(option =>
             {
-                //option.Filters.Add<LogAttribute>();
-                //option.Filters.Add<ExceptionAttribute>();
-                //option.Filters.Add(new ServiceFilterAttribute(typeof(Filters.ValidateUserFilterAttribute)));
+                option.Filters.Add<LogAttribute>();
+                option.Filters.Add<ExceptionAttribute>();
             })
            .AddFluentValidation(fv =>
            {
@@ -65,8 +56,6 @@ namespace BlueCat.Api
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-           
 
         }
 
@@ -81,11 +70,14 @@ namespace BlueCat.Api
             //允许跨域全局设置
             app.UseCors("any");
 
+            env.ConfigureNLog("nlog.config");
+
             //// 保证在 Mvc 之前调用
             app.UseHttpContextGlobal()
                .UseToolTrace();
 
             app.UseHttpsRedirection();
+
             app.UseMvc();
         }
     }

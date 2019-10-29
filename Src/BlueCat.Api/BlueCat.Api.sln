@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Entity", "BlueCat.E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Repository", "MongoDB.Repository\MongoDB.Repository.csproj", "{75E3D5B4-A1A6-4891-810F-452BA192BC11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Test", "BlueCat.Test\BlueCat.Test.csproj", "{D9062A52-D6B5-410E-B371-489EB5E5F415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Test", "BlueCat.Test\BlueCat.Test.csproj", "{D9062A52-D6B5-410E-B371-489EB5E5F415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Repository.IEntity", "MongoDB.Repository.IEntity\MongoDB.Repository.IEntity.csproj", "{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB.Repository.IEntity", "MongoDB.Repository.IEntity\MongoDB.Repository.IEntity.csproj", "{DBA21B96-8BFC-40B9-A5DF-1C99E1662B06}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueCat.Repository", "BlueCat.Repository\BlueCat.Repository.csproj", "{CA48CD66-18DF-4662-BC0E-6054BECE86EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueCat.Extensions", "BlueCat.Extensions\BlueCat.Extensions.csproj", "{990646DC-0055-4C91-8C0C-FB0AD6FA0875}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Mongo", "..\..\..\..\NLog.Mongo-master (1)\NLog.Mongo-master\src\NLog.Mongo\NLog.Mongo.csproj", "{8095F769-DF8E-413C-8CD5-45AFFE5B7F9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA48CD66-18DF-4662-BC0E-6054BECE86EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990646DC-0055-4C91-8C0C-FB0AD6FA0875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990646DC-0055-4C91-8C0C-FB0AD6FA0875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990646DC-0055-4C91-8C0C-FB0AD6FA0875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990646DC-0055-4C91-8C0C-FB0AD6FA0875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8095F769-DF8E-413C-8CD5-45AFFE5B7F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8095F769-DF8E-413C-8CD5-45AFFE5B7F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8095F769-DF8E-413C-8CD5-45AFFE5B7F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8095F769-DF8E-413C-8CD5-45AFFE5B7F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

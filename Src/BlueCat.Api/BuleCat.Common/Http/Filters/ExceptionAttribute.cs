@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,11 +13,11 @@ namespace BuleCat.Common.Http.Filters
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class ExceptionAttribute : ExceptionFilterAttribute
     {
-       // private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
+        private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
 
         public override void OnException(ExceptionContext context)
         {
-            //_logger.Error("ExceptionAttribute Error,Exception:{0},Message:{1}", context.Exception, context.Exception.Message);
+            _logger.Error("ExceptionAttribute Error,TraceId:{0},Exception:{1},Message:{2}", HttpContextGlobal.CurrentTraceId, context.Exception, context.Exception.Message);
             ExceptionHandle(context);
         }
 

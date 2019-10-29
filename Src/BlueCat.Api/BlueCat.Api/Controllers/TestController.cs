@@ -6,6 +6,7 @@ using BlueCat.Contract.Test;
 using BlueCat.Service.Interface;
 using BuleCat.Common;
 using BuleCat.Common.DependencyInjection;
+using BuleCat.Common.Http;
 using BuleCat.Common.Http.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,10 +41,10 @@ namespace BlueCat.Api.Controllers
 
         [HttpGet("v1/test1")]
         //[ValidateRequestModel]
-        public async Task<long> GetTest1Response()
+        public async Task<string> GetTest1Response()
         {
-            return await testServices.GetUserCountAsync();
-           // return "11";
+            await testServices.GetUserCountAsync();
+            return HttpContextGlobal.CurrentTraceId.ToString();
         }
     }
 }

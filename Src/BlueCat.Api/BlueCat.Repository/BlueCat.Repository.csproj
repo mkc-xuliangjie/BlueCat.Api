@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlueCat.Entity\BlueCat.Entity.csproj" />
+    <ProjectReference Include="..\BlueCat.Extensions\BlueCat.Extensions.csproj" />
     <ProjectReference Include="..\MongoDB.Repository\MongoDB.Repository.csproj" />
   </ItemGroup>
 

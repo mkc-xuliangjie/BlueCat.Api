@@ -1,4 +1,5 @@
-﻿using BuleCat.Common.Extensions;
+﻿using BlueCat.Extensions;
+using BuleCat.Common.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;

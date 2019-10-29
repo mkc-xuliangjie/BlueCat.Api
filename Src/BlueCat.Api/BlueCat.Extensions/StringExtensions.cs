@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BuleCat.Common.Extensions
+
+namespace BlueCat.Extensions
 {
     /// <summary>
     /// <see cref="string"/> 对象的扩展类

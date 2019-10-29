@@ -11,5 +11,7 @@
     public class MongoDB
     {
         public string RepositoryTest { get; set; }
+
+        public string APILogs { get; set; }
     }
 }
