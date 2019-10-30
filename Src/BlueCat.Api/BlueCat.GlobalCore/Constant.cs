@@ -1,4 +1,4 @@
-﻿namespace BuleCat.Common.Http
+﻿namespace BlueCat.GlobalCore
 {
     /// <summary>
     /// 用于常量标记

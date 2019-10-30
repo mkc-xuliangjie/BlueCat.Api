@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/NBear/!svn/ver/86/trunk/src/NBearLite/NBearLite/DbProviders/Oracle
+END
+OracleDbProviderOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/NBear/!svn/ver/54/trunk/src/NBearLite/NBearLite/DbProviders/Oracle/OracleDbProviderOptions.cs
+END
+OracleQueryFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/NBear/!svn/ver/86/trunk/src/NBearLite/NBearLite/DbProviders/Oracle/OracleQueryFactory.cs
+END
+OracleDbProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/NBear/!svn/ver/54/trunk/src/NBearLite/NBearLite/DbProviders/Oracle/OracleDbProvider.cs
+END

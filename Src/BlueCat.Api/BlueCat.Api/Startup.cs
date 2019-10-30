@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using NLog;
-using NLog.Mongo;
 using NLog.Web;
+using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 
 namespace BlueCat.Api
 {
@@ -70,7 +70,9 @@ namespace BlueCat.Api
             //允许跨域全局设置
             app.UseCors("any");
 
-            env.ConfigureNLog("nlog.config");
+            env.ConfigureNLog("NLog.config");
+
+            //loggerFactory.AddNLog();
 
             //// 保证在 Mvc 之前调用
             app.UseHttpContextGlobal()

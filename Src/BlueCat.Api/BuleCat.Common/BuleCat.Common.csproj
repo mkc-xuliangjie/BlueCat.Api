@@ -8,12 +8,13 @@
     <PackageReference Include="AutoMapper" Version="8.0.0" />
     <PackageReference Include="FluentValidation" Version="8.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
-    <PackageReference Include="NLog.Mongo" Version="4.6.0.68" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlueCaNLog.Mongo\BlueCaNLog.Mongo.csproj" />
     <ProjectReference Include="..\BlueCat.Extensions\BlueCat.Extensions.csproj" />
+    <ProjectReference Include="..\BlueCat.GlobalCore\BlueCat.GlobalCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

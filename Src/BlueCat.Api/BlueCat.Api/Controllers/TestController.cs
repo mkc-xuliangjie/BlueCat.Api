@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BlueCat.Contract.Test;
+using BlueCat.GlobalCore;
 using BlueCat.Service.Interface;
 using BuleCat.Common;
 using BuleCat.Common.DependencyInjection;

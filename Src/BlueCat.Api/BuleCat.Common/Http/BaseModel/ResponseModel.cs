@@ -1,4 +1,5 @@
-﻿using BuleCat.Common.Http;
+﻿using BlueCat.GlobalCore;
+using BuleCat.Common.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;

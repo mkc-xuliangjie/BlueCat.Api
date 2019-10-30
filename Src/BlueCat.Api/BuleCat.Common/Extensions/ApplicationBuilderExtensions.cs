@@ -1,4 +1,5 @@
-﻿using BuleCat.Common.AutoMapper;
+﻿using BlueCat.GlobalCore;
+using BuleCat.Common.AutoMapper;
 using BuleCat.Common.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;

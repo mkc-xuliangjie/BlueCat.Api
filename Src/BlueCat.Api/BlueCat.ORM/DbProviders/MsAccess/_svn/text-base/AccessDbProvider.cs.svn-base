@@ -1,0 +1,38 @@
+using System;
+using System.Data;
+using System.Data.Common;
+using System.Data.OleDb;
+using System.Xml;
+
+namespace NBearLite.DbProviders.MsAccess
+{
+	/// <summary>
+	/// <para>Represents a MsAccess Database Provider.</para>
+	/// </summary>
+	/// <remarks> 
+	/// <para>
+	/// Internally uses MsAccess .NET Managed Provider from Microsoft (System.Data.OleDb) to connect to the database.
+	/// </para>  
+	/// </remarks>
+    public class AccessDbProvider : DbProvider
+    {
+        #region Public Members
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AccessDbProvider"/> class.
+        /// </summary>
+        /// <param name="connStr">The conn STR.</param>
+        public AccessDbProvider(string connStr)
+            : base(connStr, OleDbFactory.Instance)
+        {
+            CheckOptionsConfiguration(new DbProviderOptions(), "MsAccessProviderOptions");
+        }
+
+        public override NBearLite.ISqlQueryFactory GetQueryFactory()
+        {
+            return new NBearLite.DbProviders.MsAccess.MsAccessQueryFactory();
+        }
+
+        #endregion
+    }
+}

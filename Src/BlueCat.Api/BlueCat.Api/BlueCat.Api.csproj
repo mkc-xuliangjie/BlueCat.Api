@@ -13,13 +13,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-    <PackageReference Include="NLog" Version="4.5.11" />
-    <PackageReference Include="NLog.Mongo" Version="4.6.0.68" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="4.5.1" />
+    <PackageReference Include="NLog" Version="4.6.6" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.8.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlueCaNLog.Mongo\BlueCaNLog.Mongo.csproj" />
     <ProjectReference Include="..\BlueCat.Contract\BlueCat.Contract.csproj" />
+    <ProjectReference Include="..\BlueCat.GlobalCore\BlueCat.GlobalCore.csproj" />
     <ProjectReference Include="..\BlueCat.Repository\BlueCat.Repository.csproj" />
     <ProjectReference Include="..\BlueCat.Service\BlueCat.Service.csproj" />
     <ProjectReference Include="..\BuleCat.Common\BuleCat.Common.csproj" />

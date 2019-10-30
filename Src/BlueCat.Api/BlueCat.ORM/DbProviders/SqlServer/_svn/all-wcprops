@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/NBear/!svn/ver/82/trunk/src/NBearLite/NBearLite/DbProviders/SqlServer
+END
+SqlServer9QueryFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/NBear/!svn/ver/82/trunk/src/NBearLite/NBearLite/DbProviders/SqlServer/SqlServer9QueryFactory.cs
+END
+SqlDbProvider.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/NBear/!svn/ver/54/trunk/src/NBearLite/NBearLite/DbProviders/SqlServer/SqlDbProvider.cs
+END
+SqlServerDbProviderOptions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/NBear/!svn/ver/54/trunk/src/NBearLite/NBearLite/DbProviders/SqlServer/SqlServerDbProviderOptions.cs
+END
+SqlServerQueryFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/NBear/!svn/ver/54/trunk/src/NBearLite/NBearLite/DbProviders/SqlServer/SqlServerQueryFactory.cs
+END
+SqlDbProvider9.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/NBear/!svn/ver/54/trunk/src/NBearLite/NBearLite/DbProviders/SqlServer/SqlDbProvider9.cs
+END

@@ -1,0 +1,54 @@
+8
+
+dir
+86
+http://svn.cnblogs.com:8080/svn/NBear/trunk/src/NBearLite/NBearLite/DbProviders/MsAccess
+http://svn.cnblogs.com:8080/svn/NBear
+
+
+
+2008-01-09T05:41:12.976625Z
+86
+teddy
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e2748593-22d3-144f-ace5-6d5db7128ded
+
+MsAccessQueryFactory.cs
+file
+
+
+
+
+2008-01-09T06:01:19.515625Z
+c42353d1b58fc64bf0bef3cfc7ed8c8c
+2008-01-09T05:41:12.976625Z
+86
+teddy
+has-props
+
+AccessDbProvider.cs
+file
+
+
+
+
+2008-01-09T06:01:19.531250Z
+1ab21b0e7f8dc867fb5632f13b8914e2
+2007-07-23T00:00:55.140625Z
+54
+teddy
+has-props
+

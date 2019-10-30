@@ -1,4 +1,5 @@
 ﻿using BlueCat.Extensions.Helpers;
+using BlueCat.GlobalCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
