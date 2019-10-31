@@ -552,6 +552,7 @@ namespace BlueCat.ORM
             this.queryFactory = dbProvider.GetQueryFactory();
         }
 
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Database"/> class.
         /// </summary>

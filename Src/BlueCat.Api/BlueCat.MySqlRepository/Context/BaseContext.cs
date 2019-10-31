@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using BlueCat.ORM;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,16 +17,21 @@ namespace BlueCat.MySqlRepository.Context
         /// </summary>
         public string ConnectionString { get; }
 
+        public string DBType { get; }
+
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="serviceProvider">服务提供者</param>
         /// <param name="name">在 ConnectionStrings 配置中下指定的节点</param>
-        public BaseContext(IServiceProvider serviceProvider, string name)
+        public BaseContext(IServiceProvider serviceProvider, string name, string type)
         {
             var config = serviceProvider.GetService<IConfiguration>();
 
             ConnectionString = config.GetConnectionString(name);
+
+            DBType = config.GetConnectionString(type);
         }
     }
 }

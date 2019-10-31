@@ -13,6 +13,7 @@ using System;
 using NLog.Web;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
+using BlueCat.MySqlRepository.DependencyInjection;
 
 namespace BlueCat.Api
 {
@@ -33,6 +34,8 @@ namespace BlueCat.Api
             services.AddServices();
 
             services.AddMongodbRepository();
+
+            services.AddMySqlRepositoryServices();
 
             ////配置跨域处理
             services.AddCors(options =>

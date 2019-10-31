@@ -1,5 +1,6 @@
 ﻿using BlueCat.Contract.Test;
 using BlueCat.GlobalCore;
+using BlueCat.MySqlRepository.Interface;
 using BlueCat.Repository;
 using BlueCat.Service.Interface;
 using BuleCat.Common;
@@ -14,9 +15,12 @@ namespace BlueCat.Service.Impl
         private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
 
         private readonly IUserRepository userRepository;
-        public TestService(IUserRepository iuserRepository)
+
+        private readonly ITestRepository testRepository;
+        public TestService(IUserRepository iuserRepository, ITestRepository itestRepository)
         {
             userRepository = iuserRepository;
+            testRepository = itestRepository;
         }
 
         public async Task<ResponseModel<TestResponse>> GetTestResponseAsync(TestRequest requestModel)
@@ -42,6 +46,8 @@ namespace BlueCat.Service.Impl
             //_logger.Info("funtion name:GetUserCountAsync,TraceId:{requestId}", HttpContextGlobal.CurrentTraceId);
 
             _logger.Info("funtion name:GetUserCountAsync");
+
+            _logger.Info(testRepository.Get());
 
             return await userRepository.GetUserCountAsync();
         }

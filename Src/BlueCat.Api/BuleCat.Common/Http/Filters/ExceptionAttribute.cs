@@ -19,7 +19,7 @@ namespace BuleCat.Common.Http.Filters
         public override void OnException(ExceptionContext context)
         {
             //_logger.Error("ExceptionAttribute Error,TraceId:{0},Exception:{1},Message:{2}", HttpContextGlobal.CurrentTraceId, context.Exception, context.Exception.Message);
-            _logger.Error("ExceptionAttribute Error,Exception:{1},Message:{2}", context.Exception, context.Exception.Message);
+            _logger.Error($"ExceptionAttribute Error,Exception:{context.Exception},Message:{context.Exception.Message}");
             ExceptionHandle(context);
         }
 

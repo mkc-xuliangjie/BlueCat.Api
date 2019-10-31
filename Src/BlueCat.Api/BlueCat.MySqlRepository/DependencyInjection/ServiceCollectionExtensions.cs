@@ -1,4 +1,5 @@
-﻿using BlueCat.MySqlRepository.Impl;
+﻿using BlueCat.MySqlRepository.Context;
+using BlueCat.MySqlRepository.Impl;
 using BlueCat.MySqlRepository.Interface;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,9 +10,9 @@ namespace BlueCat.MySqlRepository.DependencyInjection
     /// </summary>
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddServices(this IServiceCollection services)
+        public static IServiceCollection AddMySqlRepositoryServices(this IServiceCollection services)
         {
-            services.AddSingleton<ITestRepository, TestRepository>();
+            services.AddSingleton<BlueCatScaffoldContextSample>();
 
             services.AddScoped<ITestRepository, TestRepository>();
 
