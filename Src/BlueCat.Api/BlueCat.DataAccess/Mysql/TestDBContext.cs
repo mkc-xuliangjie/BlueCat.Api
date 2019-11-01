@@ -22,30 +22,6 @@ namespace BlueCat.DataAccess
             : base(DatabaseType.SqlServer9, cnnString)
         { }
 
-        //public static TestDBDataContext Current
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //        {
-        //            //var connect = ServiceExtensions.Configuration.GetConnectionString("TestDB");
-        //            //var dbType = ServiceExtensions.Configuration.GetValue<string>("DBType", "MSSql");
-        //            string connect = string.Empty;
-        //            string dbType = string.Empty;
-        //            DatabaseType type = DatabaseType.SqlServer9;
-        //            if (dbType == "MySql")
-        //            {
-        //                type = DatabaseType.MySql;
-        //            }
-        //            instance = new TestDBDataContext(type, connect);
-        //        }
-        //        return instance;
-        //    }
-        //}
-
-
-        private static TestDBDataContext instance;
-
         protected override System.Data.Common.DbProviderFactory WarpDbProvider(System.Data.Common.DbProviderFactory dbproviderFactory)
         {
             return dbproviderFactory;

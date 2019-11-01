@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BlueCat.MySqlRepository
 {
-    public abstract class BaseBlueCatRepository : BaseRepository
+    public abstract class BaseBlueCatRepository : TestDBDataContext
     {
         protected BaseBlueCatRepository(BaseContext context) : base(GetDatabaseTypeByConfig(context.DBType), context.ConnectionString)
         {

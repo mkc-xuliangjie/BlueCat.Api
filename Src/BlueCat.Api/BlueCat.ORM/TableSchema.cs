@@ -9,7 +9,7 @@ namespace BlueCat.ORM
     /// 表基础架构
     /// </summary>
     /// <remarks>
-    ///  	<para>创建：jiaj</para>
+    ///  	<para>创建：jason</para>
     ///  	<para>日期：2016-11-10</para>
     /// </remarks>
     public abstract class TableSchema
@@ -18,7 +18,7 @@ namespace BlueCat.ORM
         /// 名名称
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         private string tableName;
@@ -26,7 +26,7 @@ namespace BlueCat.ORM
         /// 父表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         private TableSchema parentTable;
@@ -34,7 +34,7 @@ namespace BlueCat.ORM
         /// 连接条件
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal WhereClip JoinWhere;
@@ -42,7 +42,7 @@ namespace BlueCat.ORM
         /// 属性名称
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         private string propertyName;
@@ -52,7 +52,7 @@ namespace BlueCat.ORM
         /// 表别名
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         private string tableAliasName;
@@ -62,7 +62,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <value>The name of the table alias.</value>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public string TableAliasName
@@ -87,7 +87,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <param name="tableName">表名</param>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public TableSchema(string tableName)
@@ -103,7 +103,7 @@ namespace BlueCat.ORM
         /// <param name="joinWhere">连接条件</param>
         /// <param name="propertyName">属性名称</param>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public void SetRelation(TableSchema parentTable, WhereClip joinWhere, string propertyName)
@@ -117,7 +117,7 @@ namespace BlueCat.ORM
         /// 列列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         protected List<QueryColumn> columns = new List<QueryColumn>();
@@ -125,7 +125,7 @@ namespace BlueCat.ORM
         ///外键表集合
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         private Dictionary<string, KeyValuePair<string, TableSchema>> foreignTables = new Dictionary<string, KeyValuePair<string, TableSchema>>();
@@ -136,7 +136,7 @@ namespace BlueCat.ORM
         /// <param name="column">列</param>
         /// <exception cref="System.Exception">已包含重复的列</exception>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         protected void AddColumn(QueryColumn column)
@@ -159,7 +159,7 @@ namespace BlueCat.ORM
         /// <param name="entityPropertyName">关联的属性名称</param>
         /// <exception cref="System.Exception">已包含重复外键表</exception>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         protected void AddForeignTable(TableSchema foreignTable, string entityPropertyName)
@@ -180,7 +180,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>数据列表</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal List<QueryColumn> GetColumns()
@@ -193,7 +193,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>列集合</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal string[] GetComplexColumns()
@@ -206,7 +206,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>Dictionary&lt;System.String, KeyValuePair&lt;System.String, TableSchema&gt;&gt;.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal Dictionary<string, KeyValuePair<string, TableSchema>> GetForeignTables()
@@ -220,7 +220,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <value>获取所有的列.</value>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public QueryColumn All
@@ -233,7 +233,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <value>The count.</value>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public QueryColumn Count
@@ -248,7 +248,7 @@ namespace BlueCat.ORM
         /// <param name="name">The name.</param>
         /// <returns>QueryColumn.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal QueryColumn GetColumn(string name)
@@ -261,7 +261,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <value>The pk column.</value>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal QueryColumn PKColumn
@@ -278,7 +278,7 @@ namespace BlueCat.ORM
             /// The is get pk column
             /// </summary>
             /// <remarks>
-            ///  	<para>创建：jiaj</para>
+            ///  	<para>创建：jason</para>
             ///  	<para>日期：2016-11-10</para>
             /// </remarks>
         } private bool isGetPKColumn = false;
@@ -289,7 +289,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <value><c>是</c> if this instance is foreign table; otherwise, <c>否</c>.</value>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal bool IsForeignTable { get { return parentTable != null; } }
@@ -298,7 +298,7 @@ namespace BlueCat.ORM
         /// The pk column
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         private QueryColumn pkColumn;
@@ -308,7 +308,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>System.String.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public string GetTableName()
@@ -321,7 +321,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>System.String.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         protected string GetTableAliasName()
@@ -336,7 +336,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>System.String.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         internal string GetPropertyName()
@@ -366,7 +366,7 @@ namespace BlueCat.ORM
         /// <param name="columns">The columns.</param>
         /// <returns>ExpressionClip[].</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         [Obsolete("建议使用Field代替Only")]
@@ -381,7 +381,7 @@ namespace BlueCat.ORM
         /// <param name="columns">The columns.</param>
         /// <returns>ExpressionClip[].</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-10</para>
         /// </remarks>
         public ExpressionClip[] Field(params ExpressionClip[] columns)

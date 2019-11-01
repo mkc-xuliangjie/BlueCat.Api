@@ -41,6 +41,7 @@ namespace BlueCat.Service.Impl
         }
 
         public async Task<long> GetUserCountAsync()
+
         {
             //logger.Info("GetCityServicePreInfoAsync_Repository[Begin],requestId:{requestId},account:{account},param:{@param}", requestId, account, param);
             //_logger.Info("funtion name:GetUserCountAsync,TraceId:{requestId}", HttpContextGlobal.CurrentTraceId);

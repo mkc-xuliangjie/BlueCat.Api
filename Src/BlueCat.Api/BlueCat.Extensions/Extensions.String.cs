@@ -18,5 +18,11 @@ namespace BlueCat.Extensions
         {
             return BlueCat.Extensions.Helpers.String.RemoveEnd(value, removeValue);
         }
+
+
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
     }
 }

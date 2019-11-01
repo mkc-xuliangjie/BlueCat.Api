@@ -13,7 +13,7 @@ namespace BlueCat.ORM
     /// 存储过程Section
     /// </summary>
     /// <remarks>
-    ///  	<para>创建：jiaj</para>
+    ///  	<para>创建：jason</para>
     ///  	<para>日期：2016-11-9</para>
     /// </remarks>
     public sealed class StoredProcedureSection
@@ -24,7 +24,7 @@ namespace BlueCat.ORM
         /// DB
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private DataContext db;
@@ -32,7 +32,7 @@ namespace BlueCat.ORM
         /// 存储过程名称
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private string spName;
@@ -40,7 +40,7 @@ namespace BlueCat.ORM
         /// 事务
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private DbTransaction tran;
@@ -49,7 +49,7 @@ namespace BlueCat.ORM
         /// 参数名称列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<string> inputParamNames = new List<string>();
@@ -57,7 +57,7 @@ namespace BlueCat.ORM
         /// 参数类型列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<DbType> inputParamTypes = new List<DbType>();
@@ -66,7 +66,7 @@ namespace BlueCat.ORM
         /// 参数值列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<object> inputParamValues = new List<object>();
@@ -75,7 +75,7 @@ namespace BlueCat.ORM
         /// 输出参数名称列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<string> outputParamNames = new List<string>();
@@ -84,7 +84,7 @@ namespace BlueCat.ORM
         /// 输出参数类型列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<DbType> outputParamTypes = new List<DbType>();
@@ -93,7 +93,7 @@ namespace BlueCat.ORM
         /// 输出参数长度列表
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<int> outputParamSizes = new List<int>();
@@ -102,7 +102,7 @@ namespace BlueCat.ORM
         /// The input output 参数 names
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<string> inputOutputParamNames = new List<string>();
@@ -110,7 +110,7 @@ namespace BlueCat.ORM
         /// The input output 参数 types
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<DbType> inputOutputParamTypes = new List<DbType>();
@@ -118,7 +118,7 @@ namespace BlueCat.ORM
         /// The input output 参数 values
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<object> inputOutputParamValues = new List<object>();
@@ -126,7 +126,7 @@ namespace BlueCat.ORM
         /// The input output 参数 sizes
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private List<int> inputOutputParamSizes = new List<int>();
@@ -135,7 +135,7 @@ namespace BlueCat.ORM
         /// The return value 参数 name
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private string returnValueParamName;
@@ -143,7 +143,7 @@ namespace BlueCat.ORM
         /// The return value 参数 type
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private DbType returnValueParamType;
@@ -151,7 +151,7 @@ namespace BlueCat.ORM
         /// The return value 参数 size
         /// </summary>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private int returnValueParamSize;
@@ -161,7 +161,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>IDataReader.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private IDataReader FindDataReader()
@@ -179,7 +179,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>DataSet.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private DataSet FindDataSet()
@@ -198,7 +198,7 @@ namespace BlueCat.ORM
         /// <param name="outValues">The out values.</param>
         /// <returns>DataSet.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private DataSet FindDataSet(out Dictionary<string, object> outValues)
@@ -219,7 +219,7 @@ namespace BlueCat.ORM
         /// <param name="cmd">The 命令.</param>
         /// <returns>Dictionary&lt;System.String, System.Object&gt;.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         private static Dictionary<string, object> GetOutputParameterValues(DbCommand cmd)
@@ -251,7 +251,7 @@ namespace BlueCat.ORM
         /// <param name="db">The 数据库.</param>
         /// <param name="spName">Name of the sp.</param>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public StoredProcedureSection(DataContext db, string spName)
@@ -276,7 +276,7 @@ namespace BlueCat.ORM
         /// <param name="value">The value.</param>
         /// <returns>StoredProcedureSection.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public StoredProcedureSection AddInputParameter(string name, DbType type, object value)
@@ -298,7 +298,7 @@ namespace BlueCat.ORM
         /// <param name="size">The size.</param>
         /// <returns>StoredProcedureSection.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public StoredProcedureSection AddOutputParameter(string name, DbType type, int size)
@@ -321,7 +321,7 @@ namespace BlueCat.ORM
         /// <param name="value">The value.</param>
         /// <returns>StoredProcedureSection.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public StoredProcedureSection AddInputOutputParameter(string name, DbType type, int size, object value)
@@ -344,7 +344,7 @@ namespace BlueCat.ORM
         /// <param name="size">The size.</param>
         /// <returns>StoredProcedureSection.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public StoredProcedureSection SetReturnParameter(string name, DbType type, int size)
@@ -364,7 +364,7 @@ namespace BlueCat.ORM
         /// <param name="tran">The tran.</param>
         /// <returns>StoredProcedureSection.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public StoredProcedureSection SetTransaction(DbTransaction tran)
@@ -379,7 +379,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>System.Int32.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public int ExecuteNonQuery()
@@ -398,7 +398,7 @@ namespace BlueCat.ORM
         /// <param name="outValues">The out values.</param>
         /// <returns>System.Int32.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public int ExecuteNonQuery(out Dictionary<string, object> outValues)
@@ -418,7 +418,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>System.Object.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public object ToScalar()
@@ -440,7 +440,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>IDataReader.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public IDataReader ToDataReader()
@@ -453,7 +453,7 @@ namespace BlueCat.ORM
         /// </summary>
         /// <returns>DataSet.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public DataSet ToDataSet()
@@ -467,7 +467,7 @@ namespace BlueCat.ORM
         /// <param name="outValues">The out values.</param>
         /// <returns>System.Object.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public object ToScalar(out Dictionary<string, object> outValues)
@@ -489,7 +489,7 @@ namespace BlueCat.ORM
         /// <param name="outValues">The out values.</param>
         /// <returns>DataSet.</returns>
         /// <remarks>
-        ///  	<para>创建：jiaj</para>
+        ///  	<para>创建：jason</para>
         ///  	<para>日期：2016-11-9</para>
         /// </remarks>
         public DataSet ToDataSet(out Dictionary<string, object> outValues)
