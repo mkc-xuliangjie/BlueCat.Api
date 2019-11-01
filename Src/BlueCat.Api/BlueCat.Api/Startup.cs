@@ -16,6 +16,8 @@ using NLog.Extensions.Logging;
 using BlueCat.MySqlRepository.DependencyInjection;
 using BlueCat.NLog.Layout;
 using BlueCat.NLog.DependencyInjection;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace BlueCat.Api
 {
@@ -40,6 +42,8 @@ namespace BlueCat.Api
             services.AddMySqlRepositoryServices();
 
             services.AddBlueCatMongoNLogServices();
+
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             ////配置跨域处理
             services.AddCors(options =>

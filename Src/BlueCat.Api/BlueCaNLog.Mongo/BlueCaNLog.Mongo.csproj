@@ -9,8 +9,4 @@
     <PackageReference Include="NLog" Version="4.6.6" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BlueCat.GlobalCore\BlueCat.GlobalCore.csproj" />
-  </ItemGroup>
-
 </Project>
