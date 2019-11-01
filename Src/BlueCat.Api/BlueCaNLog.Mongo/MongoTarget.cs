@@ -354,16 +354,16 @@ namespace BlueCaNLog.Mongo
         {
             //Update by liangjie.xu 2019-10-30,添加NLog,RequestId
 
-            if ((string.IsNullOrEmpty(field.BsonType) || string.Equals(field.BsonType, "String", StringComparison.OrdinalIgnoreCase)) && field.Name.ToLower() == "requestid")
-                return new BsonString(HttpContextGlobal.CurrentTraceId);
+            //if ((string.IsNullOrEmpty(field.BsonType) || string.Equals(field.BsonType, "String", StringComparison.OrdinalIgnoreCase)) && field.Name.ToLower() == "requestid")
+            //    return new BsonString(HttpContextGlobal.CurrentTraceId);
 
-            if ((string.IsNullOrEmpty(field.BsonType) || string.Equals(field.BsonType, "String", StringComparison.OrdinalIgnoreCase)) && field.Name.ToLower() == "hostname")
-            {
-                //这里存储的当前服务器的IP+端口+接口地址+url参数
-                string result = $"{HttpContextGlobal.Ip}:{HttpContextGlobal.Current.Request.Host.Port}{HttpContextGlobal.Current.Request.Path}{HttpContextGlobal.Current.Request.QueryString}";
+            //if ((string.IsNullOrEmpty(field.BsonType) || string.Equals(field.BsonType, "String", StringComparison.OrdinalIgnoreCase)) && field.Name.ToLower() == "hostname")
+            //{
+            //    //这里存储的当前服务器的IP+端口+接口地址+url参数
+            //    ;
 
-                return new BsonString(result);
-            }
+            //    return new BsonString(result);
+            //}
 
             var value = (field.Layout != null ? RenderLogEvent(field.Layout, logEvent) : string.Empty).Trim();
             if (string.IsNullOrEmpty(value))

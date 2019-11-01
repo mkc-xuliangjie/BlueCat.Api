@@ -11,6 +11,8 @@ namespace BlueCat.NLog.Layout
         {
             LayoutRenderer.Register<RequestIdLayoutRenderer>("request_id");
 
+            LayoutRenderer.Register<HostNameLayoutRenderer>("hostname");
+
         }
     }
 }

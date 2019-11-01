@@ -14,6 +14,8 @@ using NLog.Web;
 using Microsoft.Extensions.Logging;
 using NLog.Extensions.Logging;
 using BlueCat.MySqlRepository.DependencyInjection;
+using BlueCat.NLog.Layout;
+using BlueCat.NLog.DependencyInjection;
 
 namespace BlueCat.Api
 {
@@ -37,6 +39,8 @@ namespace BlueCat.Api
 
             services.AddMySqlRepositoryServices();
 
+            services.AddBlueCatMongoNLogServices();
+
             ////配置跨域处理
             services.AddCors(options =>
             {
@@ -59,7 +63,6 @@ namespace BlueCat.Api
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,10 +75,6 @@ namespace BlueCat.Api
 
             //允许跨域全局设置
             app.UseCors("any");
-
-            env.ConfigureNLog("NLog.config");
-
-            //loggerFactory.AddNLog();
 
             //// 保证在 Mvc 之前调用
             app.UseHttpContextGlobal()

@@ -1,4 +1,5 @@
 ﻿using BlueCat.NLog.Layout;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NLog;
 using System;
@@ -13,7 +14,23 @@ namespace BlueCat.NLog
         {
             LayoutExtentions.ReisterNlogLayout();
             LogManager.LoadConfiguration(nlogConfigFile);
+            factory.AddProvider(new NLogProvider());
             return factory;
+        }
+
+        public static ILoggingBuilder AddNLog(this ILoggingBuilder builder, string nlogConfigFile = "nlog.config")
+        {
+            LayoutExtentions.ReisterNlogLayout();
+            builder.Services.AddSingleton<ILoggerProvider>(sp => new NLogProvider());
+            return builder;
+        }
+
+        public static ILoggingBuilder AddNLog(this ILoggingBuilder builder, Func<string, Microsoft.Extensions.Logging.LogLevel, bool> filter, string nlogConfigFile = "nlog.config")
+        {
+            LayoutExtentions.ReisterNlogLayout();
+            builder.AddFilter(filter);
+            builder.Services.AddSingleton<ILoggerProvider>(sp => new NLogProvider());
+            return builder;
         }
     }
 }
