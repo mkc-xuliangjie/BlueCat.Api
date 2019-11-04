@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using BlueCat.Contract.Test;
 using BlueCat.GlobalCore;
@@ -11,7 +12,9 @@ using BuleCat.Common.Http;
 using BuleCat.Common.Http.Filters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
+using StackExchangeRedis;
 
 namespace BlueCat.Api.Controllers
 {
@@ -24,12 +27,28 @@ namespace BlueCat.Api.Controllers
 
         private readonly ITestServices testServices;
 
-        public TestController(ITestServices itestServices, IOptions<AppSettings> options)
+        //private readonly IDistributedCache distributedCache;
+
+        //public TestController(ITestServices itestServices, IOptions<AppSettings> options,  IDistributedCache distributedCache)
+        //{
+        //    appSettings = options.Value;
+
+        //    testServices = itestServices;
+
+        //    this.distributedCache = distributedCache;
+        //}
+
+        private readonly IRedisCache redisCache;
+
+        public TestController(ITestServices itestServices, IOptions<AppSettings> options, IRedisCache iredisCache)
         {
             appSettings = options.Value;
 
             testServices = itestServices;
+
+            redisCache = iredisCache;
         }
+
 
         [HttpGet("v1/test")]
         [ValidateRequestModel]
@@ -44,6 +63,31 @@ namespace BlueCat.Api.Controllers
         //[ValidateRequestModel]
         public async Task<string> GetTest1Response()
         {
+            //var value = distributedCache.Get("name-key");
+            //string valStr = string.Empty;
+            //if (value == null)
+            //{
+            //    valStr = "孙悟空三打白骨精！";
+            //    // 存储的数据必须为字节，所以需要转换一下
+            //    var encoded = Encoding.UTF8.GetBytes(valStr);
+            //    // 配置类：30秒过时
+            //    var options = new DistributedCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(30));
+            //    distributedCache.Set("name-key", encoded, options);
+
+            //    distributedCache.SetString("test", "111111");
+            //}
+
+            
+            var value = redisCache.Get("name-key");
+            string valStr = string.Empty;
+            if (value == null)
+            {
+                valStr = "孙悟空三打白骨精！";
+
+                redisCache.Set("name-key", valStr, 30);
+            }
+
+
             await testServices.GetUserCountAsync();
             return HttpContextGlobal.CurrentTraceId.ToString();
         }

@@ -18,6 +18,8 @@ using BlueCat.NLog.Layout;
 using BlueCat.NLog.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using BuleCat.Common.Cache.DependencyInjection;
+using StackExchangeRedis.DependencyInjection;
 
 namespace BlueCat.Api
 {
@@ -67,6 +69,11 @@ namespace BlueCat.Api
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+
+            //services.AddRedisSettings(Configuration);
+
+            services.AddStackExchangeRedis(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

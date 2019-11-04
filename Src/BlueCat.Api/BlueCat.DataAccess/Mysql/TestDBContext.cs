@@ -27,5 +27,24 @@ namespace BlueCat.DataAccess
             return dbproviderFactory;
         }
 
+        public static DatabaseType GetDatabaseTypeByConfig(string type)
+        {
+            type = type.ToLower().Trim();
+
+            switch (type)
+            {
+                case "sqlserver":
+                    return DatabaseType.SqlServer;
+
+                case "sqlserver9":
+                    return DatabaseType.SqlServer9;
+
+                case "mysql":
+                    return DatabaseType.MySql;
+
+                default:
+                    return DatabaseType.MySql;
+            }
+        }
     }
 }
