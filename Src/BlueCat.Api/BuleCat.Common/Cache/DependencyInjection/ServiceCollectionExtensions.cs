@@ -1,4 +1,5 @@
 ﻿using CSRedis;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -17,12 +18,14 @@ namespace BuleCat.Common.Cache.DependencyInjection
         //    });
 
         //    return services;
-
-
         //}
 
-        public static IServiceCollection AddCSRedisSettings(this IServiceCollection services, params string[] redisConnectionStrings)
+        public static IServiceCollection AddCSRedisSettings(this IServiceCollection services, IConfiguration configuration)
         {
+            var options= configuration.GetSection("Redis").Get<RedisOptions>();
+
+            string[] redisConnectionStrings = options.ConnectionStrings;
+
             if (services == null) throw new ArgumentNullException(nameof(services));
             if (redisConnectionStrings == null || redisConnectionStrings.Length == 0)
                 throw new ArgumentNullException(nameof(redisConnectionStrings));
@@ -43,7 +46,7 @@ namespace BuleCat.Common.Cache.DependencyInjection
             RedisHelper.Initialization(redisClient);
 
             //// 注册MVC分布式缓存
-            //services.AddSingleton<IDistributedCache>(new Microsoft.Extensions.Caching.Redis.CSRedisCache(RedisHelper.Instance));
+            //services.AddSingleton<IDistributedCache>(new CSRedisCache(RedisHelper.Instance));
 
             return services;
         }

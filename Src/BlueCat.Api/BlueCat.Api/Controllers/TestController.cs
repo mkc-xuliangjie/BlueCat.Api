@@ -16,6 +16,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
 using StackExchangeRedis;
 
+
 namespace BlueCat.Api.Controllers
 {
     //[Route("api/[controller]")]
@@ -38,15 +39,22 @@ namespace BlueCat.Api.Controllers
         //    this.distributedCache = distributedCache;
         //}
 
-        private readonly IRedisCache redisCache;
+        //private readonly IRedisCache redisCache;
 
-        public TestController(ITestServices itestServices, IOptions<AppSettings> options, IRedisCache iredisCache)
+        // public TestController(ITestServices itestServices, IOptions<AppSettings> options, IRedisCache iredisCache)
+        // {
+        //     appSettings = options.Value;
+
+        //     testServices = itestServices;
+
+        //     redisCache = iredisCache;
+        // }
+
+        public TestController(ITestServices itestServices, IOptions<AppSettings> options)
         {
             appSettings = options.Value;
 
             testServices = itestServices;
-
-            redisCache = iredisCache;
         }
 
 
@@ -78,13 +86,13 @@ namespace BlueCat.Api.Controllers
             //}
 
             
-            var value = redisCache.Get("name-key");
+            var value = RedisHelper.Get("name-key");
             string valStr = string.Empty;
             if (value == null)
             {
                 valStr = "孙悟空三打白骨精！";
 
-                redisCache.Set("name-key", valStr, 30);
+                RedisHelper.Set("name-key", valStr, 30);
             }
 
 

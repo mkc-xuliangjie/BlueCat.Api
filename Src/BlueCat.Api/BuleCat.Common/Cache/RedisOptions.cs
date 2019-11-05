@@ -14,5 +14,7 @@
         /// Redis连接字符串，长度等于1为单机模式，长度大于0为集群模式
         /// </summary>
         public string[] ConnectionStrings { get; set; }
+
+        public string SentinelListeningConnectionString { get; set; }
     }
 }

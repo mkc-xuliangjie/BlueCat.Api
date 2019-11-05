@@ -71,9 +71,12 @@ namespace BlueCat.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 
+            //微软自带的redis
             //services.AddRedisSettings(Configuration);
 
-            services.AddStackExchangeRedis(Configuration);
+            services.AddCSRedisSettings(Configuration);
+
+            //services.AddStackExchangeRedis(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

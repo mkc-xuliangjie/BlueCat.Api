@@ -47,6 +47,8 @@ namespace StackExchangeRedis
         /// <returns></returns>
         public Task<bool> RemoveAsync(string key)
         {
+           
+
             return Client.KeyDeleteAsync(key);
         }
         /// <summary>
@@ -2002,5 +2004,10 @@ namespace StackExchangeRedis
 
         }
         #endregion
+
+        //public void SetNX(string key)
+        //{
+        //    Client.setnx
+        //}
     }
 }
