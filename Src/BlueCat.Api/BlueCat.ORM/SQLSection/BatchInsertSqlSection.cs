@@ -1,16 +1,4 @@
-﻿// ***********************************************************************
-// Assembly         : BlueCat.ORM
-// Author           : Teddy
-// Created          : 2018-03-22
-//
-// Last Modified By : Teddy
-// Last Modified On : 2018-03-22
-// ***********************************************************************
-// <copyright file="BatchInsertSqlSection.cs" company="上海同是科技股份有限公司">
-//     Copyright (c) 上海同是科技股份有限公司. All rights reserved.
-// </copyright>
-// <summary></summary>
-// ***********************************************************************
+
 using System;
 using System.Collections.Generic;
 using System.Data;
